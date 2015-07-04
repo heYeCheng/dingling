@@ -1,0 +1,88 @@
+@import url("base.css");
+
+/*历史纪录*/
+.mainBox{
+	min-height: 100%;
+	width: 94%;
+	margin-left: 3%;
+	overflow: hidden;
+	zoom:1;
+}
+.mainBox .showTable{
+	width: 100%;
+	margin-top: 45px;
+	overflow: hidden;
+	zoom:1;
+	color: #0E77E5;
+	line-height: 50px;
+}
+
+/*个人中心展示*/
+.set{
+	position: absolute;
+	right: 10px;
+}
+.person{
+	width: 80%;
+	padding: 10px 5%;
+	margin:50px auto 10px;
+}
+.mainBox img{
+	width: 30%;
+	float: left;
+}
+.mainBox .info{
+	margin-left: 2%;
+	float: left;
+}
+.mainBox .info span{
+	color: red;
+}
+
+.btn{
+	width: 90%;
+	line-height: 30px;
+	margin: 5px auto;
+	display: block;
+	text-align: center;
+	border: 1px solid #888;
+}
+
+/*其它功能*/
+.other{
+	width: 90%;
+	margin: 5px auto;
+}
+.other a{
+	width: 29%;
+	margin: 1.5%;
+	float: left;
+	display: block;
+	text-align: center;
+	border-radius: 50%;
+	background: #0E77E5;
+	color: #FFF;
+}
+
+
+/*编辑个人信息*/
+#changeBox{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	display: none;
+}
+#changeBox .show_school{
+	width: 100%;
+	overflow: hidden;
+	zoom:1;
+	margin-top: 45px;
+}
+
+#changeBox .show_school input{
+	width: 94%;
+	margin: 5px 2% 0px;
+	height: 30px;
+}

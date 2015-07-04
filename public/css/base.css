@@ -1,0 +1,37 @@
+body{
+	font-family: 'Microsoft YaHei' ,'Quattrocento', serif;
+	margin: 0px; padding: 0px;
+	height: 100%;
+}
+.head{
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	background: #FFF;
+	position: fixed;
+	top: 0px;
+}
+.boderBottom{
+	border-bottom: 1px solid #888;
+}
+.foot{
+	width: 94%;
+	margin-left: 3%;
+	position: absolute;
+	bottom: 5px;
+}
+.foot .submit{
+	height: 30px;
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+a{
+	text-decoration: none;
+}

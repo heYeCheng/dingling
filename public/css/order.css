@@ -1,0 +1,111 @@
+@import url("base.css");
+
+/*展示商品*/
+.mainBox{
+	min-height: 100%;
+	width: 94%;
+	margin-left: 3%;
+	overflow: hidden;
+	zoom:1;
+}
+.mainBox .title{
+	width: 100%;
+	margin-top: 45px;
+	overflow: hidden;
+	zoom:1;
+	text-align: center;
+	color: #0E77E5;
+	line-height: 50px;
+	border-bottom: 1px solid #AAA;
+}
+.mainBox .product{
+	width: 100%;
+	margin: 15px auto;
+	overflow: hidden;
+	zoom:1;
+}
+.mainBox .product .box{
+	float: left;
+	width: 24%;
+	margin: 1% 4%;
+	border: 1px solid #888;
+	border-radius: 50%;
+	text-align: center;
+}
+.chosen{
+	background: #0E77E5;
+	border-color: #0E77E5;
+	color: #FFF;
+}
+
+/*展示成功下单页面*/
+.mainBox .show{
+	width: 100%;
+	margin-top: 50px;
+	text-align: center;
+}
+.mainBox .show .info span{
+	padding: 5px;
+}
+.mainBox .show img{
+	width: 60%;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+.mainBox .show .title_suss{
+	width: 100%;
+	overflow: hidden;
+	zoom:1;
+	text-align: center;
+	color: #0E77E5;
+	line-height: 50px;
+}
+.mainBox .title_suss span{
+	color: red;
+}
+.mainBox .box01{
+	text-align: center;
+}
+.box01 .btn{
+	display: inline-block;
+	border: 1px solid #888;
+	padding: 5px 15px;
+	margin: 10px 5px;
+}
+/*展示成功下单页面*/
+
+
+/*填写数量*/
+.mainBox .count{
+	text-align: center;
+	font-size: 18px;
+	overflow: hidden;
+	zoom:1;
+}
+.mainBox .count span{
+	margin: 5px;
+	display: inline-block;
+	padding: 0px 10px;
+}
+.mainBox .count .num{
+	border: 1px solid #AAA;
+}
+/*填写数量*/
+
+/*积分情况*/
+/*.info{
+	width: 60%;
+	margin: 10px auto;
+}
+.info p{
+	text-align: center;
+}
+
+.info span{
+	float: right;
+	margin-left: 5px;
+	color: #0E77E5;
+}
+.info .left_point{
+	color: red;
+}*/

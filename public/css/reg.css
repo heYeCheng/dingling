@@ -1,0 +1,59 @@
+@import url("base.css");
+/*展示学校*/
+.mainBox{
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+	zoom:1;
+	margin-top: 45px;
+}
+.mainBox .show_school{
+	width: 100%;
+	overflow: hidden;
+	zoom:1;
+}
+.mainBox .show_school .box{
+	float: left;
+	width: 29%;
+	margin: 1.5%;
+	border: 1px solid #888;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.mainBox .show_school input{
+	width: 94%;
+	margin: 5px 2% 0px;
+	height: 30px;
+}
+#second{
+	display: none;
+}
+
+/*其它信息*/
+.mainBox .info{
+	width: 94%;
+	margin: 5px auto;
+}
+.mainBox .info span{
+	color: red;
+}
+
+.btn{
+	width: 30%;
+	border-radius: 50%;
+	display: block;
+	text-align: center;
+	background: #0E77E5;
+	color: #FFF;
+	margin: 15px auto;
+}
+/*提交没有参加活动的学校*/
+.foot .title{
+	text-align: center;
+	margin-bottom: 10px;
+}
+.foot input{
+	width: 99%;
+	height: 20px;
+}
