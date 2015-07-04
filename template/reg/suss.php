@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
 </head>
 <body>
-	<div class="head boderBottom">欢迎加入叮铃校园</div>
+	<div class="head boderBottom">欢迎加入叮铃校园哈哈哈</div>
 	<div class="mainBox boderBottom">
 		<div class="info">信息确认成功赠送 <span>100</span> 积分</div>
 		<p></p>
