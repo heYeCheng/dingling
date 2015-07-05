@@ -6,17 +6,12 @@ class commonMod{
 	protected $config = array();
 	private $_data = array();
 	
-	protected function init(){
-		
-	}
-	
 	public function __construct(){
 		global $config;
 		$this->config = $config;
 		$this->model = self::initModel( $this->config );
 		// session_start();
 		$this->wx = new Weixin($this->config['AppID'], $this->config['AppSecret']);
-		// $this->init();	
 	}
 	
 	//初始化模型
@@ -164,6 +159,10 @@ class commonMod{
 				return $default;
 			}
 		}
+	}
+
+	public function set_cookie($name, $value, $time = EX_TIME_COOKIE){
+		setcookie($name, $value, time() + $time, __ROOT__);
 	}
 
 }

@@ -24,6 +24,8 @@ class Weixin
 
 	// 验证用户是不是微信用户
 	public function vali_weixin_user($code){
+		 $data['openid'] = 'opF2vsy01Q2OCBVZ-O4TBLBSz4Pw';
+		 return $data;
 		$url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$this->wx_appID.'&secret='.$this->wx_appsecret.'&code='.$code.'&grant_type=authorization_code';
 		$data = $this->https_request($url);
 		$data = json_decode($data, True);

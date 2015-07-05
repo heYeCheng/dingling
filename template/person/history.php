@@ -18,19 +18,20 @@
 				<td>数量</td>
 				<td>消费方式</td>
 			</tr>
-			<?php if(is_array($info)) foreach($info as $vo){
-					echo '<tr><td>'. $vo['created'] . '</td>';
-					$json = json_decode($vo['detail'], True);
-					echo '<td>'. $json[0]['gname']. '</td>';
-					echo '<td>'. $json[0]['num']. '</td>';
+			<?php if(is_array($info)) foreach($info as $vo){ ?>
+				<tr>
+					<td>{$vo['created']}</td>
+					<td>{$vo['g_name']}</td>
+					<td>{$vo['num']}</td>
+				<?php
 					if ($vo['pay_type'] == 1) {
 						echo '<td>积分-'. $vo['consume_points'] .'</td>';
 					}else{
 						echo '<td>'. $vo['total_fee'] .'元</td>';
 					}
-					echo '</tr>';
-				}
-			?>
+				?>
+				</tr>
+			<?php } ?>
 		</table>
 			
 	</div>

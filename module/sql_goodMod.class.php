@@ -27,7 +27,6 @@ class sql_goodMod extends commonMod{
 		$res = $this->model->table($this->config['goods'])->field($field)->where($con)->find();
 		return $res;
 	}
-
 }
 
 ?>

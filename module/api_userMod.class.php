@@ -9,7 +9,7 @@ class api_userMod extends commonMod{
 			$p_id = $this->check_user_openId($openid); // 判断这个 微信号是否注册了
 			if ($p_id) {
 				$this->set_login_mark($p_id, $code);
-				return True;
+				return $p_id;
 			}
 		}else{
 			return False;
@@ -29,7 +29,7 @@ class api_userMod extends commonMod{
 			if ($data) {
 				$data = json_decode($data, True);
 				if ($data['key'] == $key) {
-					return True;
+					return $p_id;
 				}
 			}
 		}
@@ -113,7 +113,7 @@ class api_userMod extends commonMod{
 	*/
 	public function get_info_order_mysql($p_id, $url){
 		$con = 'p_id ='.$p_id;
-		$field = 'created, detail, total_fee, pay_type, consume_points';
+		$field = 'created, g_name, num, total_fee, pay_type, consume_points';
 
 		$page = new Page();
 		$listRows = 10;//产品每页显示的信息条数
