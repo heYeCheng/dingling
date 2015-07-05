@@ -7,6 +7,7 @@ require(CP_PATH.'core/cpApp.class.php');//加载应用控制类
 require(CP_PATH.'core/cpModel.class.php');//加载数据库模型类
 require(CP_PATH.'core/cpTemplate.class.php');//加载模板类
 
+
 $app=new cpApp($config);//实例化单一入口应用控制类  
 //执行项目
 $app->run();
