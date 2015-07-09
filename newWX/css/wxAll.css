@@ -1,0 +1,90 @@
+/*初始化样式*/
+*{
+    padding:0 0;
+    margin:0 0;
+}
+html, body{
+    background: #fff4e3;
+    width:100%;
+    height: 100%;
+}
+img{
+    border:none;
+    display: block;
+}
+.clear{
+    clear:both;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ccc;
+}
+
+
+
+/*所有设备统一的样式*－－－－头部*start*/
+.header-box{
+    background: #ff9c00;
+    width:100%;
+    height:13%;
+    border-bottom:solid 5px #ffd052;
+    overflow: hidden;
+}
+.logo-box{
+    width:60%;
+    margin:0 auto;
+}
+/*所有设备统一的样式*－－－－头部*end*/
+
+/*提交按钮的样式*/
+
+.btn-box{
+    width:100%;
+    margin:0 auto;
+    position: relative;
+    top:20px;
+}
+.btn-box img{
+    width:100%;
+}
+.btn-box input{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    display:none;
+}
+
+@media only screen and (min-device-width: 320px){
+/*针对iPhone 3*/
+}
+@media only screen and (min-device-width: 320px)and (-webkit-min-device-pixel-ratio: 2) {
+/*针对iPhone 4, 5c,5s, 所有iPhone6的放大模式，个别iPhone6的标准模式*/
+    .logo-box{
+        margin-top:8px;
+    }
+}
+@media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 2) {
+/*针对大多数iPhone6的标准模式*/
+}
+@media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 3) {
+/*针对所有iPhone6+的放大模式*/
+    .logo-box{
+        margin-top:12px;
+    }
+}
+@media only screen and (min-device-width:412px) and (-webkit-min-device-pixel-ratio: 3) {
+/*针对所有iPhone6+的标准模式,414px写为412px是由于三星Nexus 6为412px，可一并处理*/
+    .logo-box{
+        margin-top:15px;
+    }
+}

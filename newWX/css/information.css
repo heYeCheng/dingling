@@ -1,0 +1,64 @@
+.information-form{
+    width:80%;
+    margin:30px auto 0 auto;
+}
+.selectInput-box{
+    display: block;
+    background:#fff;
+    width:100%;
+    height:45px;
+    border:solid 1px #ddd;
+    border-radius: 7px;
+    position: relative;
+}
+.current-select{
+    display: block;
+    padding: 12px 0 0 3%;
+    font-size:20px;
+    color:#ccc;
+}
+.selected-color{
+    color:#333;
+}
+.selectInput{
+    opacity: 0;
+    width:100%;
+    height: 45px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.textInput{
+    width:97%;
+    height: 45px;
+    border:solid 1px #ddd;
+    border-radius: 7px;
+    margin-top:10px;
+    padding-left:3%;
+    font-size:20px;
+    color:#333;
+    -webkit-appearance:none;
+}
+.tiny{
+    width:53%!important;
+    margin-right:2%;
+    float:left;
+}
+.btnInput{
+    width:100%;
+    height: 33px;
+}
+.micro{
+    background:#ffba00;
+    width:40%;
+    float: left;
+    margin-top:10px;
+    border-radius: 7px;
+    border:solid 1px #ffba00;
+    position: relative;
+    left: 3px;
+    text-align:center;
+    padding-top:12px;
+    font-size:20px;
+    color:#fff;
+}
