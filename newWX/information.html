@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0" />
+    <title>完善个人信息</title>
+    <link rel="stylesheet" href="css/wxAll.css"/>
+    <link rel="stylesheet" href="css/information.css"/>
+</head>
+    <script src="js/all.js"></script>
+<body>
+    <div class="header-box">
+        <img class="logo-box" src="imgs/title-logo.png"/>
+    </div>
+    <div class="content">
+        <form class="information-form">
+            <a class="selectInput-box">
+                <span class="current-select">请选择校区</span>
+                <select class="selectInput" onchange="change(this)">
+                    <option>请选择校区</option>
+                    <option>南校区</option>
+                    <option>北校区</option>
+                </select>
+            </a>
+            <input class="textInput" type="number" placeholder="宿舍号 (例如:13-424)"/>
+            <input class="textInput" type="tel" placeholder="手机号"/>
+            <div class="message-box">
+                <input class="textInput tiny" type="text"/>
+                <a class="btnInput micro">获取短信</a>
+                <div class="clear"></div>
+            </div>
+            <div class="btn-box">
+                <a href="inforConfirm.html"><img src="imgs/submit-btn.png" onclick="document.getElementById('information-btn').click();"/></a>
+                <!--<input id="information-btn" class="btnInput" type="submit"/>-->
+            </div>
+        </form>
+    </div>
+</body>
+</html>
