@@ -1,0 +1,65 @@
+.first-item{
+    margin-top:15px;
+    border-top:solid 1px #dddddd;
+}
+.infor-item{
+    width:100%;
+    border-bottom:solid 1px #ddd;
+    background: #fff;
+}
+
+.infor-item p{
+    font-size:20px;
+    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
+    color:#333;
+    float: left;
+    padding:10px 0 10px 0;
+}
+.item-content{
+    text-decoration: none!important;
+    color:#ccc!important;
+    margin-left:15%;
+}
+.change-infor-btn{
+    width:4%;
+    padding:13px 7% 13px 5%;
+    float: right!important;
+}
+
+/*选框*/
+.selectInput-box{
+    border:none!important;
+}
+.current-select{
+    padding-left:15%;
+}
+.item-box{
+    width:80%;
+    margin:20px auto 0 auto;
+}
+
+/*输入框*/
+.textInput{
+    width:85%;
+    border:none;
+    padding-left:15%;
+    margin-top:0px;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #333;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #333;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #333;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #333;
+}
