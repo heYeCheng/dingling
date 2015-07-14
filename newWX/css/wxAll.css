@@ -37,6 +37,8 @@ img{
     height:13%;
     border-bottom:solid 5px #ffd052;
     overflow: hidden;
+    position: relative;
+    z-index:999;
 }
 .logo-box{
     width:60%;
@@ -45,7 +47,6 @@ img{
 /*所有设备统一的样式*－－－－头部*end*/
 
 /*提交按钮的样式*/
-
 .btn-box{
     width:100%;
     margin:0 auto;
@@ -63,6 +64,83 @@ img{
     left: 0;
     display:none;
 }
+
+.subBtn-box{
+    background:#ffd545;
+    width:100%;
+    padding-bottom:16%;
+    position: fixed;
+    bottom:0;
+}
+.btn-box{
+    width:80%!important;;
+    top:20px!important;
+}
+
+
+/*按钮*/
+.displayBtn{
+    display: none;
+}
+.bottom-btn-box{
+    width:90%;
+    margin:0 auto 10px auto;
+}
+.bottom-btn1{
+    width:49%;
+    margin-right:2%;
+    float: left;
+    position: relative;
+    top:10px;
+}
+.bottom-btn2{
+    width:49%;
+    float: left;
+    position: relative;
+    top:10px;
+}
+
+/*选框样式*/
+.selectInput-box{
+    display: block;
+    background:#fff;
+    width:100%;
+    height:45px;
+    border:solid 1px #ddd;
+    border-radius: 7px;
+    position: relative;
+}
+.current-select{
+    display: block;
+    padding: 12px 0 0 3%;
+    font-size:20px;
+    color:#ccc;
+}
+.selected-color{
+    color:#333;
+}
+.selectInput{
+    opacity: 0;
+    width:100%;
+    height: 45px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+/*输入框*/
+.textInput{
+    width:97%;
+    height: 45px;
+    border:solid 1px #ddd;
+    border-radius: 7px;
+    margin-top:10px;
+    padding-left:3%;
+    font-size:20px;
+    color:#333;
+    -webkit-appearance:none;
+}
+
 
 @media only screen and (min-device-width: 320px){
 /*针对iPhone 3*/

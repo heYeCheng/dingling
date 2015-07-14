@@ -16,13 +16,17 @@ function selectBrand(){
     if (!event.touches.length) return;
     var dom = event.target;
     var imgList = document.getElementsByClassName('light');
+    var brandId = document.getElementById('brand-id');
 
     for(var i=0; i<imgList.length; i++){
         imgList[i].src="imgs/brand-light.png";
         imgList[i].name="";
     }
+
     dom.src = "imgs/brand-selected.png";
     dom.name = "selected";
+    brandId.value = dom.id;
+
 
     findSelected();
 }

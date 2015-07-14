@@ -146,13 +146,7 @@
 }
 
 
-.subBtn-box{
-    background:#ffd545;
-    width:100%;
-    padding-bottom:16%;
-    position: fixed;
-    bottom:0;
-}
+
 .check-box{
     margin-top:18px;
     margin-left:11%;
@@ -180,10 +174,7 @@
     margin-left:5px;
     color:#e8324b;
 }
-.btn-box{
-    width:80%!important;;
-    top:20px!important;
-}
+
 
 
 @media only screen and (min-device-width: 320px){

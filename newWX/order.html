@@ -27,7 +27,7 @@
                     <a class="brand-a" href="#">
                         <div class="brand-price" title="16"></div>
                         <div class="brand-integration" title="150"></div>
-                        <img class="light" src="imgs/brand-light.png"/>
+                        <img id="brand1" class="light" src="imgs/brand-light.png"/>
                     </a>
                 </li>
                 <li>
@@ -36,21 +36,22 @@
                     <a class="brand-a" href="#">
                         <div class="brand-price" title="15"></div>
                         <div class="brand-integration" title="100"></div>
-                        <img class="light" src="imgs/brand-light.png"/>
+                        <img id="brand2" class="light" src="imgs/brand-light.png"/>
                     </a>
                 </li>
                 <li>
-                    <img class="brand-List-box" src="imgs/choose-school-back.png"/>
+                    <img class="brand-List-box" src="imgs/choose-school-back.png" />
                     <img class="brand-logo" src="images/wahaha.png"/>
                     <a class="brand-a" href="javascript:">
                         <div class="brand-price" title="18"></div>
                         <div class="brand-integration" title="120"></div>
-                        <img class="light" src="imgs/brand-light.png"/>
+                        <img id="brand3" class="light" src="imgs/brand-light.png"/>
                     </a>
                 </li>
                 <div class="clear"></div>
             </ul>
-            <input id="brand-value" type="hidden" name="brand" value="0"/>
+            <input id="brand-id" type="hidden" name="brand" value="0"/>
+            <input id="brand-value" type="hidden" value="0"/>
             <input id="pay-method" type="hidden" name="method" value="price"/>
             <input id="num-value" type="hidden" name="num" value="2"/>
 
@@ -82,7 +83,7 @@
                 <div class="clear"></div>
 
                 <div class="btn-box">
-                    <a href="http://www.baidu.com"><img src="imgs/submit-btn.png" onclick="document.getElementById('information-btn').click();"/></a>
+                    <a href="orderSuccess.html"><img src="imgs/submit-btn.png" onclick="document.getElementById('information-btn').click();"/></a>
                     <!--<input id="information-btn" class="btnInput" type="submit"/>-->
                 </div>
             </div>
