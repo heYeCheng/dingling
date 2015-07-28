@@ -36,6 +36,11 @@ document.ready(function(){
     ctrlR.addEventListener("touchstart", numPlus, false);
     ctrlL.addEventListener("touchstart", numMinus, false);
 
+    var ctrlLEX = document.getElementById('control-left-extract');
+    var ctrlREX = document.getElementById('control-right-extract');
+    ctrlREX.addEventListener("touchstart", numPlusEx, false);
+    ctrlLEX.addEventListener("touchstart", numMinusEx, false);
+
     var check = document.getElementById('integration-check');
     var selected = document.getElementById('check-selected');
     check.addEventListener("touchstart", integrationCheck, false);

@@ -12,8 +12,8 @@
 <body>
     <div class="header-box">
         <ul>
-            <li class="order-method-selected"><a href="order.html">即订即取</a></li>
-            <li><a href="order-batch.html">批量下订</a></li>
+            <li><a href="order.html">即订即取</a></li>
+            <li class="order-method-selected"><a href="order-batch.html">批量下订</a></li>
         </ul>
     </div>
 
@@ -57,34 +57,47 @@
             <input id="brand-id" type="hidden" name="brand" value="0"/>
             <input id="brand-value" type="hidden" value="0"/>
             <input id="pay-method" type="hidden" name="method" value="price"/>
-            <input id="num-value" type="hidden" name="num" value="2"/>
+            <input id="num-value" type="hidden" name="num" value="20"/>
+            <input id="extract-num-value" type="hidden" value="2"/>
 
             <div class="number-box">
                 <div class="number-title">
                     <img src="imgs/order-number-title.png"/>
                 </div>
                 <div class="number-control-box">
-                    <div id="control-left" class="control-left" title="once">
-                        <div class="minus" title="once"></div>
+                    <div id="control-left" class="control-left">
+                        <div class="minus"></div>
                     </div>
                     <div class="control-middle">
-                        <p id="num">2</p>
+                        <p id="num">20</p>
                     </div>
-                    <div id="control-right" class="control-right" title="once">
-                        <div class="minus" title="once"></div>
-                        <div class="plus" title="once"></div>
+                    <div id="control-right" class="control-right">
+                        <div class="minus"></div>
+                        <div class="plus"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="subBtn-box">
-                <div class="check-box">
-                    <img id="integration-check" class="check-back" src="imgs/order-check-back.png"/>
-                    <img id="check-selected" style="display: none;" class="check-selected" src="imgs/order-check-selected.png"/>
+            <div class="number-box extract-box">
+                <div class="number-title">
+                    <img src="imgs/order-extract.png"/>
                 </div>
-                <img class="check-title" src="imgs/order-integration-title.png"/>
-                <p class="integration-now">9999</p>
-                <div class="clear"></div>
+                <div class="number-control-box">
+                    <div id="control-left-extract" class="control-left">
+                        <div class="minus"></div>
+                    </div>
+                    <div class="control-middle">
+                        <p id="num-extract">2</p>
+                    </div>
+                    <div id="control-right-extract" class="control-right">
+                        <div class="minus"></div>
+                        <div class="plus"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="subBtn-box batch-box">
 
                 <div class="btn-box">
                     <a href="orderSuccess.html"><img src="imgs/submit-btn.png" onclick="document.getElementById('information-btn').click();"/></a>

@@ -70,43 +70,127 @@ function _showPrice(sl, method){
 
 
 
-//数量增减
+//下订数量增减
 function numPlus(){
     var numValue = document.getElementById('num-value');
     var num = document.getElementById('num');
     var numNow = numValue.value;
+    numNow = parseInt(numNow);
 
-    if(numNow < 4){
-        numNow++;
-        num.innerHTML = numNow;
-        numValue.value = numNow;
-        if(numNow == 4){
-            var plusBtnR = document.getElementById('control-right');
-            plusBtnR.className = "control-right untouched";
+    var touch = event.target;
+
+    if(touch.title=="once"){
+        if(numNow < 4){
+            numNow++;
+            num.innerHTML = numNow;
+            numValue.value = numNow;
+            if(numNow == 4){
+                var plusBtnR = document.getElementById('control-right');
+                plusBtnR.className = "control-right untouched";
+            }
+            if(numNow == 2){
+                var plusBtnL = document.getElementById('control-left');
+                plusBtnL.className = "control-left";
+            }
         }
-        if(numNow == 2){
-            var plusBtnL = document.getElementById('control-left');
-            plusBtnL.className = "control-left";
+    }else{
+        if(numNow < 60){
+            numNow = numNow + 5;
+            num.innerHTML = numNow;
+            numValue.value = numNow;
+            if(numNow == 60){
+                var plusBtnR = document.getElementById('control-right');
+                plusBtnR.className = "control-right untouched";
+            }
+            if(numNow == 20){
+                var plusBtnL = document.getElementById('control-left');
+                plusBtnL.className = "control-left";
+            }
         }
-        findSelected();
     }
+    findSelected();
+
 }
 
 function numMinus(){
     var numValue = document.getElementById('num-value');
     var num = document.getElementById('num');
     var numNow = numValue.value;
+    numNow = parseInt(numNow);
 
-    if(numNow > 1){
+    var touch = event.target;
+
+    if(touch.title=="once") {
+        if (numNow > 1) {
+            numNow--;
+            num.innerHTML = numNow;
+            numValue.value = numNow;
+            if (numNow == 1) {
+                var plusBtnL = document.getElementById('control-left');
+                plusBtnL.className = "control-left untouched";
+            }
+            if (numNow == 3) {
+                var plusBtnR = document.getElementById('control-right');
+                plusBtnR.className = "control-right";
+            }
+        }
+    }else{
+        if (numNow > 15) {
+            numNow = numNow-5;
+            num.innerHTML = numNow;
+            numValue.value = numNow;
+            if (numNow == 15) {
+                var plusBtnL = document.getElementById('control-left');
+                plusBtnL.className = "control-left untouched";
+            }
+            if (numNow == 55) {
+                var plusBtnR = document.getElementById('control-right');
+                plusBtnR.className = "control-right";
+            }
+        }
+    }
+    findSelected();
+}
+
+//提取数量增减
+function numPlusEx(){
+    var numValue = document.getElementById('extract-num-value');
+    var num = document.getElementById('num-extract');
+    var numNow = numValue.value;
+    numNow = parseInt(numNow);
+
+    if(numNow < 4){
+        numNow++;
+        num.innerHTML = numNow;
+        numValue.value = numNow;
+        if(numNow == 4){
+            var plusBtnR = document.getElementById('control-right-extract');
+            plusBtnR.className = "control-right untouched";
+        }
+        if(numNow == 2){
+            var plusBtnL = document.getElementById('control-left-extract');
+            plusBtnL.className = "control-left";
+        }
+    }
+    findSelected();
+}
+function numMinusEx(){
+    var numValue = document.getElementById('extract-num-value');
+    var num = document.getElementById('num-extract');
+    var numNow = numValue.value;
+    numNow = parseInt(numNow);
+
+
+    if (numNow > 1) {
         numNow--;
         num.innerHTML = numNow;
         numValue.value = numNow;
-        if(numNow == 1){
-            var plusBtnL = document.getElementById('control-left');
+        if (numNow == 1) {
+            var plusBtnL = document.getElementById('control-left-extract');
             plusBtnL.className = "control-left untouched";
         }
-        if(numNow == 3){
-            var plusBtnR = document.getElementById('control-right');
+        if (numNow == 3) {
+            var plusBtnR = document.getElementById('control-right-extract');
             plusBtnR.className = "control-right";
         }
     }

@@ -1,6 +1,6 @@
 .dormitory-box{
     width:100%;
-    margin:25px auto 0 auto;
+    margin:15px auto 0 auto;
 }
 .dormitory-box img{
     width:20%;
@@ -16,7 +16,7 @@
 
 
 .brand-List{
-    margin:20px 0 0 20px;
+    margin:10px 0 0 20px;
 }
 
 .brand-List li{
@@ -76,13 +76,16 @@
     width:48%;
     margin:0 auto;
     position: relative;
-    bottom:18px;
+    bottom:28px;
 }
 .number-control-box{
     background:#ffe29a;
-    width:100%;
-    height: 54px;
+    width:90%;
+    height: 48px;
     border-radius: 10px;
+    margin: 0 auto;
+    position:relative;
+    bottom:18px;
 }
 .number-control-box div{
     float: left;
@@ -90,7 +93,7 @@
 .control-left{
     background: #ff9c00;
     width:28%;
-    height: 46px;
+    height: 40px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     margin:4px 0 4px 4px;
@@ -98,14 +101,14 @@
 .minus{
     background: #fff;
     width:60%;
-    height:8px;
+    height:6px;
     border-radius: 5px;
-    margin:19px 20% 19px 20%;
+    margin:17px 20% 17px 20%;
 }
 .control-middle{
     background: #fff;
     width:37%;
-    height: 44px;
+    height: 38px;
     margin-top:4px;
     position: relative;
     border-left:solid 2px #e5e5e5;
@@ -125,7 +128,7 @@
 .control-right{
     background: #ff9c00;
     width:28%;
-    height: 46px;
+    height: 40px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     margin:4px 4px 4px 0;
@@ -135,7 +138,7 @@
 .plus{
     background: #fff;
     width:15%;
-    height:30px;
+    height:28px;
     border-radius: 5px;
     position: absolute;
     left: 43%;
@@ -173,6 +176,39 @@
     margin-top:20px;
     margin-left:5px;
     color:#e8324b;
+}
+
+.header-box{
+    background: #ffd052;
+    border-bottom:solid 5px #ff9c00;
+}
+.header-box ul{
+    width:100%;
+    height: 100%;
+}
+.header-box ul li{
+    width:50%;
+    height: 100%;
+    float: left;
+    list-style: none;
+}
+.header-box ul li a{
+    display: block;
+    width:100%;
+    height: 78%;
+    font-size: 24px;
+    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
+    font-weight: 700;
+    text-align:center;
+    color:#fff;
+    text-decoration: none;
+    padding-top:12%;
+}
+.order-method-selected{
+    background: #ff9c00;
+}
+.extract-box{
+    margin-top:25px;
 }
 
 
