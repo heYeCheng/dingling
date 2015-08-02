@@ -26,6 +26,7 @@
 })();
 
 document.ready(function(){
+    var orderMethod = document.getElementById('order-method');
     var brandList = document.getElementsByClassName('light');
     for(var i=0; i<brandList.length; i++){
         brandList[i].addEventListener("touchstart", selectBrand, false);
@@ -36,13 +37,17 @@ document.ready(function(){
     ctrlR.addEventListener("touchstart", numPlus, false);
     ctrlL.addEventListener("touchstart", numMinus, false);
 
-    var ctrlLEX = document.getElementById('control-left-extract');
-    var ctrlREX = document.getElementById('control-right-extract');
-    ctrlREX.addEventListener("touchstart", numPlusEx, false);
-    ctrlLEX.addEventListener("touchstart", numMinusEx, false);
+    if(orderMethod.title=="batch"){
+        var ctrlLEX = document.getElementById('control-left-extract');
+        var ctrlREX = document.getElementById('control-right-extract');
+        ctrlREX.addEventListener("touchstart", numPlusEx, false);
+        ctrlLEX.addEventListener("touchstart", numMinusEx, false);
+    }
 
     var check = document.getElementById('integration-check');
     var selected = document.getElementById('check-selected');
-    check.addEventListener("touchstart", integrationCheck, false);
+    if(orderMethod.title=="once"){
+        check.addEventListener("touchstart", integrationCheck, false);
+    }
     selected.addEventListener("touchstart", integrationCheck, false);
 });

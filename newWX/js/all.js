@@ -19,11 +19,11 @@ function selectBrand(){
     var brandId = document.getElementById('brand-id');
 
     for(var i=0; i<imgList.length; i++){
-        imgList[i].src="imgs/brand-light.png";
+        imgList[i].src="/static/imgs/brand-light.png";
         imgList[i].name="";
     }
 
-    dom.src = "imgs/brand-selected.png";
+    dom.src = "/static/imgs/brand-selected.png";
     dom.name = "selected";
     brandId.value = dom.id;
 
