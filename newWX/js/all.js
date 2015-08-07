@@ -4,11 +4,17 @@
 function change(option){
     var first = option.options[0];
     var content = option.options[option.selectedIndex].text;
-    var current = document.getElementsByClassName("current-select")[0];
+    var currentSchool = document.getElementsByClassName("current-select")[0];
+    var currentDistrict = document.getElementsByClassName("current-select")[1];
 
     first.disabled = true;
-    current.innerHTML = content;
-    current.className = "current-select selected-color";
+    if(option.title=="school"){
+        currentSchool.innerHTML = content;
+        currentSchool.className = "current-select selected-color";
+    }else{
+        currentDistrict.innerHTML = content;
+        currentDistrict.className = "current-select selected-color";
+    }
 }
 
 function selectBrand(){
