@@ -44,10 +44,11 @@ document.ready(function(){
         ctrlLEX.addEventListener("touchstart", numMinusEx, false);
     }
 
-    var check = document.getElementById('integration-check');
-    var selected = document.getElementById('check-selected');
     if(orderMethod.title=="once"){
+        var check = document.getElementById('integration-check');
+        var selected = document.getElementById('check-selected');
         check.addEventListener("touchstart", integrationCheck, false);
+        selected.addEventListener("touchstart", integrationCheck, false);
     }
-    selected.addEventListener("touchstart", integrationCheck, false);
+
 });
