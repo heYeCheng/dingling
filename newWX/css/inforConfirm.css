@@ -1,3 +1,6 @@
+.content{
+    position: relative;
+}
 .inforConfirm-img{
     width:100%;
 }
@@ -17,4 +20,9 @@
 .img-btn{
     width:100%;
     position: relative;
+    top:1px;
+}
+.inforConfirm-img-lr{
+    width:50%;
+    float: left;
 }

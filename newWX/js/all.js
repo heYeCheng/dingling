@@ -219,3 +219,16 @@ function integrationCheck(){
     }
 
 }
+//跳转到订水下单页面
+function atOnce(){
+    //配置上服务器，修改未对应的路径
+    setTimeout(realJump, 500);
+}
+function realJump(){
+    window.location.href ="order.html";
+}
+
+//未开放功能提醒函数
+function waitForIt(){
+    alert("敬请期待！");
+}
