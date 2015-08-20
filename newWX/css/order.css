@@ -182,6 +182,11 @@
     background: #ffd052;
     border-bottom:solid 5px #ff9c00;
 }
+.header-only{
+    background: #ff9c00!important;
+    border-bottom:solid 5px #ffd052!important;
+}
+
 .header-box ul{
     width:100%;
     height: 100%;
