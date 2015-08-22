@@ -42,10 +42,13 @@ html,body{
     position: absolute;
     top:0;
     right: -70px;
-}
-.order-cancel-btn {
     display: block;
-
+}
+.order-dealing{
+    background:#ff9c00!important;
+}
+.order-done{
+    background:#ccc!important;
 }
 
 

@@ -14,7 +14,7 @@ var myScroll,
 function pullUpAction () {
     setTimeout(function () {
         var tBody = document.getElementById('tBody');
-        var tr, td1,td2,td3,td4;
+        var tr, td1,td2,td3,td4,td5;
 
         if(tBody.title=="order") {
             for (var i = 0; i < 3; i++) {
@@ -23,6 +23,7 @@ function pullUpAction () {
                 td2 = document.createElement('td');
                 td3 = document.createElement('td');
                 td4 = document.createElement('td');
+                td5 = document.createElement('td');
 
                 tr.className = "table-body-back";
 
@@ -37,11 +38,17 @@ function pullUpAction () {
 
                 td4.innerHTML = "积分消费 -100";
 
+                td5.innerHTML = "取消</br>订单";
+                td5.className = "order-cancel-btn";
+                td5.title = "btn";
+
                 tr.appendChild(td1);
                 tr.appendChild(td2);
                 tr.appendChild(td3);
                 tr.appendChild(td4);
+                tr.appendChild(td5);
 
+                tr.addEventListener('touchstart',touchStartPos,false);
                 tBody.appendChild(tr);
             }
         }else{
@@ -132,8 +139,8 @@ var movingY = 0;
 var movingElement;
 //实现左右横拉事件--订单取消功能
 function touchStartPos(){
-    if(event.target.title == "btn"){
-        alert("正在弄"); alert("正在弄");//触发按钮对应功能函数
+    if(event.target.title == "btn"&&event.target.className == "order-cancel-btn"){
+        alert("正在弄");//触发按钮对应功能函数
     }else{
         var touch = event.targetTouches[0];
         startX = Number(touch.pageX);
