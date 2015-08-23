@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0" />
+    <title>下单成功</title>
+    <link rel="stylesheet" href="{$static_url}/css/wxAll.css"/>
+    <link rel="stylesheet" href="{$static_url}/css/orderSuccess.css"/>
+</head>
+    <script src="{$static_url}/js/all.js"></script>
+<body>
+<div class="header-box">
+    <img class="logo-box" src="{$static_url}/imgs/title-logo.png"/>
+</div>
+<div class="content">
+    <div class="title-box">
+        <img src="{$static_url}/imgs/orderSuccess-title-left.png" class="title-left"/>
+        <img src="{$static_url}/imgs/orderSuccess-title-star.png" class="title-star"/>
+        <span>{$cookie.point}</span>
+        <img src="{$static_url}/imgs/orderSuccess-title-right.png" class="title-right"/>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="main-body">
+        <img src="{$static_url}/imgs/orderSuccess-main-pic.png" class="main-body-pic"/>
+        <img src="{$static_url}{$cookie.pic}" class="detail-brand-logo"/>
+        <div class="detail-box">
+            <p>{$cookie.addr}</p>
+            <p> {$cookie.num}桶</p>
+        </div>
+    </div>
+
+    <div class="bottom-back">
+        <img src="{$static_url}/imgs/orderSuccess-bottom-text1.png" class="bottom-text1">
+        <img src="{$static_url}/imgs/orderSuccess-bottom-text2.png" class="bottom-text2">
+        <p class="white-back1">{$cookie.tnum}</p>
+        <p class="white-back2">{$cookie.fee}</p>
+        <p class="white-back3">{$cookie.rank}%</p>
+
+        <div class="bottom-btn-box">
+            <a href="/person/index"><img src="{$static_url}/imgs/orderSuccess-bottom-btn1.png" class="bottom-btn1"/></a>
+            <a href="javascript:void(0)" onclick="alert('敬请期待！')"><img src="{$static_url}/imgs/orderSuccess-bottom-share-btn.png" class="bottom-btn2"/></a>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

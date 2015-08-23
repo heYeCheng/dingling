@@ -17,7 +17,6 @@ html, body{
     right:19.5%;
     font-size:14px;
     color:#ff7800;
-    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     font-weight: 700;
     text-align:center;
 }
@@ -51,7 +50,6 @@ html, body{
     left: 49%;
 }
 .detail-box p{
-    font-family:"Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     font-size:14px;
     color:#666;
 }
@@ -76,7 +74,6 @@ html, body{
 }
 
 .bottom-back p{
-    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     font-weight: 700;
     background:#fff;
     text-align: center;

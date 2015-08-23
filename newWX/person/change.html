@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="format-detection" content="telephone = no"/>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0" />
+    <title>修改个人信息</title>
+    <link rel="stylesheet" href="{$static_url}/css/wxAll.css"/>
+    <link rel="stylesheet" href="{$static_url}/css/changeInfor.css"/>
+    <script type="text/javascript" src="{$static_url}/js/base64.js"></script>
+    <script src="{$static_url}/js/all.js"></script>
+</head>
+<body>
+    <div class="header-box">
+        <img class="logo-box" src="{$static_url}/imgs/title-logo.png"/>
+    </div>
+
+    <div class="content">
+        <form>
+            <div class="infor-item first-item">
+                <p class="item-content" >{$info['phone']}</p>
+                <div class="clear"></div>
+            </div>
+            <div class="infor-item">
+                <a class="selectInput-box">
+                    <span class="current-select selected-color">{$info['s_name']}</span>
+                    <!-- <select class="selectInput" title="school" onchange="change(this), getDistrictOption('schId', 'district')" id="schId">
+                        <option value="">请选择学校</option>
+                        {foreach $res as $vo}
+                            <option value="{$vo.s_id}" title="{$vo.c_id}@@{$vo.c_name}">{$vo.name}</option>
+                        {/foreach}
+                    </select> -->
+                </a>
+            </div>
+
+            <div class="infor-item">
+                <a class="selectInput-box">
+                    <span class="current-select selected-color">{$info['c_name']}</span>
+                    <!-- <select class="selectInput" title="district" onchange="change(this)" id="district">
+                        <option value="">请选择校区</option>
+                    </select> -->
+                </a>
+            </div>
+
+            <div class="infor-item">
+                <input class="textInput" type="text" placeholder="{$info['addr']}" value="{$info['addr']}" id="room" />
+            </div>
+
+        </form>
+
+        <div class="subBtn-box">
+            <div class="btn-box">
+                <a href="javascript:void(0)"><img src="{$static_url}/imgs/submit-btn.png" onclick="upForm();"/></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    getDistrictOption('schId', 'district')
+    //送水员关联他所负责的学校，选中某个校区后，获得option的value
+    function getDistrictOption(obj, toObj){
+        var districtSelect = document.getElementById(obj);
+        var selectedIndex = districtSelect.selectedIndex;
+        var selectedOpt = districtSelect.options[selectedIndex];
+
+        str = '<option value="">请选择校区</option>'
+        label = selectedOpt.title
+        la_arr = label.split('@@')
+        val_arr = la_arr[0].split(',')
+        text_arr = la_arr[1].split(',')
+        for (var i = 0; i < val_arr.length; i++) {
+            str += '<option value="'+ val_arr[i] +'">' + text_arr[i] + '</option>'
+        };
+        document.getElementById(toObj).innerHTML = str
+    }
+
+    function upForm(){
+        link = '{$url_code}'
+        // schid = document.getElementById('schId').value
+        // cid = document.getElementById('district').value
+        room = document.getElementById('room').value
+        // if (cid.length < 1) {
+        //     alert('请选择校区')
+        // }else if(schid.length < 1){
+        //     alert('请选择学校')
+        // }else{
+        data = room
+        data = BASE64.encoder(data);
+        link = link.replace(/state=/gm,'state='+data);
+        location.href = link
+        // }
+    }
+</script>
+</html>

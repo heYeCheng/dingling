@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<html lang="zh">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0" />
+    <title>选择所在高校</title>
+    <link rel="stylesheet" href="{$static_url}/css/wxAll.css"/>
+    <link rel="stylesheet" href="{$static_url}/css/selectSchool.css"/>
+    <link rel="stylesheet" href="{$static_url}/css/information.css"/>
+    <script type="text/javascript" src="{$static_url}/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{$static_url}/js/base64.js"></script>
+	<script type="text/javascript" src="{$static_url}/js/all.js"></script>
+</head>
+
+<body>
+    <div class="header-box">
+        <img class="logo-box" src="{$static_url}/imgs/title-logo.png"/>
+    </div>
+    <div class="content" id="first">
+        <ul class="school-List">
+        	{foreach $res as $vo}
+				<li>
+	                <img class="school-List-box" src="{$static_url}/image/choose-school-back-{$vo.pic}.png"/>
+	                <img class="school-logo" onclick="clickBox({$vo.s_id}, '{$vo.c_id}', '{$vo.c_name}')" src="{$static_url}/image/{$vo.pic}.png"/>
+	            </li>
+			{/foreach}
+
+            <div class="clear"></div>
+        </ul>
+        <form class="freeback-form">
+            <img class="freeback-top" src="{$static_url}/imgs/freeback-top.png">
+            <div  class="freeback-middle">
+                <textarea></textarea>
+            </div>
+            <img class="freeback-top" src="{$static_url}/imgs/freeback-bottom.jpg">
+
+            <div class="freeback-btn">
+                <img src="{$static_url}/imgs/freeback-btn.png" onclick="document.getElementById('freeback-btn').click();"/>
+                <input id="freeback-btn" type="submit"/>
+            </div>
+        </form>
+    </div>
+
+    <div class="content" style="display:none" id="second">
+        <form class="information-form">
+            <a class="selectInput-box">
+                <span class="current-select">请选择校区</span>
+                <select class="selectInput" title="district" onchange="change_reg(this)" id="selectInput">
+                    <option value="">请选择校区</option>
+                    <option>南校区</option>
+                    <option>北校区</option>
+                </select>
+            </a>
+            <input type="hidden" id="schId" value="">
+            <input class="textInput" type="text" id="room" placeholder="宿舍号 (例如:13-424)"/>
+            <input class="textInput" type="tel" id="phone" placeholder="手机号"/>
+            <!-- <div class="message-box">
+                <input class="textInput tiny" type="text"/>
+                <a class="btnInput micro">获取短信</a>
+                <div class="clear"></div>
+            </div> -->
+            <div class="btn-box">
+                <img src="{$static_url}/imgs/submit-btn.png" onclick="upForm()"/>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+	function clickBox(id, cid, cname){
+		$('#schId').val(id)
+        c_arr = cid.split(',')
+        cn_arr = cname.split(',')
+
+        str = '<option value="">请选择校区</option>'
+        for (var i = 0; i < c_arr.length; i++) {
+            str += '<option value="'+ c_arr[i] +'">'+ cn_arr[i] + '</option>';
+        };
+        $('#selectInput').html(str)
+		$('#first').hide('300')
+		$('#second').show('300')
+	}
+
+	function upForm(){
+		link = '{$url_code}'
+        cid = $('#selectInput').val()
+        if (cid.length < 1) {
+            alert('请选择校区')
+        }else{
+            data = $('#schId').val() + '@@' + $('#room').val() + '@@' + $('#phone').val() + '@@' + cid
+            data = BASE64.encoder(data);
+            link = link.replace(/state=/gm,'state='+data);
+            location.href = link
+        }
+	}
+</script>
+</html>
+</html>

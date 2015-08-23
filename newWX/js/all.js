@@ -227,8 +227,3 @@ function atOnce(){
 function realJump(){
     window.location.href ="order.html";
 }
-
-//未开放功能提醒函数
-function waitForIt(){
-    alert("敬请期待！");
-}

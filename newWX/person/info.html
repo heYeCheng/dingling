@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0" />
+    <title>个人中心</title>
+    <link rel="stylesheet" href="{$static_url}/css/wxAll.css"/>
+    <link rel="stylesheet" href="{$static_url}/css/personalCenter.css"/>
+</head>
+<body>
+    <div class="header-box personal-center">
+        <img class="personal-pic" src="{$info.pic}"/>
+        <div class="p-inform">
+            <p class="p-name">{$info.name}</p>
+            <div class="integration-box">
+                <img src="{$static_url}/imgs/integration-box.png"/>
+                <p class="integration-value">{$info.point}</p>
+            </div>
+            <div class="empty-box-back">
+                <img src="{$static_url}/imgs/empty-box-back.png"/>
+                <p class="empty-value">{$left_num}</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <a href="./change"><img class="setting-icon" src="{$static_url}/imgs/setting-pic.png"/></a>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="bottom-btn-box">
+            <a href="./history"><img src="{$static_url}/imgs/personal-center-order-btn.png" class="bottom-btn1"/></a>
+            <a href="./integration"><img src="{$static_url}/imgs/person-center-integration-btn.png" class="bottom-btn2"/></a>
+            <div class="clear"></div>
+        </div>
+
+        <ul class="function-List">
+            <li>
+                <img class="function-List-box" src="{$static_url}/imgs/function-back.png"/>
+                <a href="/book/shop"><img class="function-icon" src="{$static_url}/imgs/inforConfirm-dingshui-btn.png"/></a>
+            </li>
+            <li>
+                <img class="function-List-box" src="{$static_url}/imgs/function-back.png"/>
+            </li>
+            <div class="clear"></div>
+        </ul>
+
+
+        <div class="subBtn-box">
+            <div class="btn-box" id="signBtn">
+                {if $ifSign == 1}
+                    <img src="{$static_url}/imgs/personal-center-checkin-btn-already.png"/>
+                {else}
+                    <img src="{$static_url}/imgs/personal-center-checkin-btn.png" onclick="signin();"/>
+                {/if}
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="{$static_url}/js/ajax.js"></script>
+<script type = "text/javascript">
+    var ajax=Ajax();
+
+    function signin(){
+        ajax.get("/person/signin", function(data){
+            alert(data);
+            str = '<img src="{$static_url}/imgs/personal-center-checkin-btn-already.png"/>'
+            document.getElementById('signBtn').innerHTML = str
+        });
+    }
+        
+</script>
+
+</html>

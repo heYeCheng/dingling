@@ -19,7 +19,6 @@
     height:20px;
     font-weight: 700;
     font-size:18px;
-    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     color:#fff;
 }
 .integration-box{
@@ -33,7 +32,6 @@
 }
 .integration-value{
     width:25%;
-    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     font-size:18px;
     color:#ff6c00;
     text-align:center;
@@ -53,7 +51,6 @@
 }
 .empty-value{
     width:40%;
-    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     font-size:18px;
     color:#ff6c00;
     text-align:center!important;
