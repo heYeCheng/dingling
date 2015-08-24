@@ -1,0 +1,144 @@
+html, body{
+    background: #ffefd6;
+}
+.title-box{
+    width:80%;
+    margin:10px auto 0 auto;
+    position: relative;
+}
+.title-left{
+    float: left;
+    width:60%;
+}
+.title-box span{
+    width:20%;
+    position: absolute;
+    top:29%;
+    right:19.5%;
+    font-size:14px;
+    color:#ff7800;
+    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
+    font-weight: 700;
+    text-align:center;
+}
+.title-star{
+    float: left;
+    width:20%;
+}
+.title-right{
+    float: left;
+    width:20%;
+}
+
+.main-body{
+    width:100%;
+    position: relative;
+}
+.main-body-pic{
+    width:100%;
+}
+
+.detail-brand-logo{
+    width:22%;
+    position: absolute;
+    top:51.5%;
+    left: 26.5%;
+}
+.detail-box{
+    width:20%;
+    position: absolute;
+    top:60%;
+    left: 49%;
+}
+.detail-box p{
+    font-family:"Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
+    font-size:14px;
+    color:#666;
+}
+
+.bottom-back{
+    background: #ffd545;
+    width:100%;
+    position: fixed;
+    bottom:0;
+    padding-bottom:30px;
+}
+
+.bottom-text1{
+    width:95%;
+    margin:0 auto;
+    position: relative;
+    top:8px;
+}
+.bottom-text2{
+    width:95%;
+    margin:0 auto;
+}
+
+.bottom-back p{
+    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
+    font-weight: 700;
+    background:#fff;
+    text-align: center;
+    padding:3px 5px;
+    border-radius: 5px;
+    position: absolute;
+}
+.white-back1{
+    top:5%;
+    left: 36%;
+    color:#35b3fb;
+}
+.white-back2{
+    top:5%;
+    left: 76%;
+    color:#e92021;
+}
+.white-back3{
+    top:25%;
+    left: 52%;
+    color:#ff9000;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-device-width: 320px){
+    /*针对iPhone 3*/
+}
+@media only screen and (min-device-width: 320px)and (-webkit-min-device-pixel-ratio: 2) {
+    /*针对iPhone 4, 5c,5s, 所有iPhone6的放大模式，个别iPhone6的标准模式*/
+}
+@media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 2) {
+    /*针对大多数iPhone6的标准模式*/
+}
+@media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 3) {
+    /*针对所有iPhone6+的放大模式*/
+    .title-box span{
+        font-size:18px;
+        top:30%;
+    }
+}
+@media only screen and (min-device-width:412px) and (-webkit-min-device-pixel-ratio: 3) {
+    /*针对所有iPhone6+的标准模式,414px写为412px是由于三星Nexus 6为412px，可一并处理*/
+    .title-box span{
+        font-size:18px;
+        top:31%;
+    }
+    .detail-box p{
+        font-size:18px;
+    }
+    .white-back1{
+        font-size:22px;
+    }
+    .white-back2{
+        font-size:22px;
+    }
+    .white-back3{
+        font-size:22px;
+    }
+}

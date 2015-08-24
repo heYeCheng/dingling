@@ -1,0 +1,20 @@
+.header-box{
+    background: #ff9c00;
+    border-bottom:solid 5px #ffd052;
+}
+.left-water{
+    width:40%;
+    height:100px;
+    margin:15px auto 15px auto;
+    position: relative;
+}
+.left-water p{
+    width:50px;
+    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
+    font-size:24px;
+    text-align: center;
+    color:orangered;
+    position: absolute;
+    top:21px;
+    left: 50px;
+}
