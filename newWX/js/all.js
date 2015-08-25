@@ -33,7 +33,6 @@ function selectBrand(){
     dom.name = "selected";
     brandId.value = dom.id;
 
-
     findSelected();
 }
 

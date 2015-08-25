@@ -44,7 +44,13 @@
                 </select>
             </a>
             <input type="hidden" id="schId" value="">
-            <input class="textInput" type="text" id="room" placeholder="宿舍号 (例如:13-424)"/>
+            <!--<input class="textInput" type="text" id="room" placeholder="宿舍号 (例如:13-424)"/>-->
+            <div class="dormitory-box">
+                <input id="build" class="textInput input-building" type="tel" placeholder="栋号" value=""/>
+                <input id="dormitory" class="textInput input-dormitory" type="tel" placeholder="宿舍号" value=""/>
+                <div class="clear"></div>
+                <input id="room" type="hidden" value="@"/>
+            </div>
             <input class="textInput" type="tel" id="phone" placeholder="手机号"/>
             <!-- <div class="message-box">
                 <input class="textInput tiny" type="text"/>
@@ -75,10 +81,19 @@
 	function upForm(){
 		link = '{$url_code}'
         cid = $('#selectInput').val()
+        var roomNum = document.getElementById('room').value;
+        var build = document.getElementById('build').value;
+        var dormitory = document.getElementById('dormitory').value;
+
         if (cid.length < 1) {
             alert('请选择校区')
+        }else if(build=="@"&&isNaN(build)) {
+            alert('请填写宿舍栋号,仅支持数字')
+        }else if(dormitory=="@"&&isNaN(dormitory)) {
+            alert('请填写宿舍号，仅支持数字')
         }else{
-            data = $('#schId').val() + '@@' + $('#room').val() + '@@' + $('#phone').val() + '@@' + cid
+            roomNum = build + "-" +dormitory;
+            data = $('#schId').val() + '@@' + roomNum + '@@' + $('#phone').val() + '@@' + cid
             data = BASE64.encoder(data);
             link = link.replace(/state=/gm,'state='+data);
             location.href = link

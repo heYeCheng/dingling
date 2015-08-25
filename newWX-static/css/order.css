@@ -21,11 +21,11 @@
 }
 
 .brand-List li{
-    width:33%;
-    list-style: none;
-    float: left;
-    position: relative;
-}
+     width:33%;
+     list-style: none;
+     float: left;
+     position: relative;
+ }
 .brand-List-box{
     width:100%;
 }

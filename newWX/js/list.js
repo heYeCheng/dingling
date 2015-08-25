@@ -114,14 +114,18 @@ function loaded() {
             }
         },
         onScrollMove: function () {
-            if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
-                pullUpEl.className = 'flip';
-                pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
-                this.maxScrollY = this.maxScrollY;
-            } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
-                pullUpEl.className = '';
-                pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
-                this.maxScrollY = pullUpOffset;
+            if(this.y>-5){
+                return;
+            }else{
+                if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                    pullUpEl.className = 'flip';
+                    pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                    this.maxScrollY = this.maxScrollY;
+                } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                    pullUpEl.className = '';
+                    pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                    this.maxScrollY = pullUpOffset;
+                }
             }
         },
         onScrollEnd: function () {

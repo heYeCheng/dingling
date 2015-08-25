@@ -18,7 +18,7 @@
     <div class="content">
         <div class="dormitory-box">
             <img src="{$static_url}/imgs/order-dormitory.png"/>
-            <p>{$info.addr}</p>
+            <p class="confirm-info-source">{$info.addr}</p>
             <div class="clear"></div>
         </div>
         <form class="order-form">
@@ -26,7 +26,7 @@
                 {foreach $goods_info as $vo}
                     <li>
                         <img class="brand-List-box" src="{$static_url}/imgs/choose-school-back.png"/>
-                        <img class="brand-logo" src="{$static_url}{$vo.pic}"/>
+                        <img class="brand-logo confirm-info-source" src="{$static_url}{$vo.pic}" title=""/>
                         <a class="brand-a" href="#">
                             <div class="brand-price" title="{$vo.price}"></div>
                             <div class="brand-integration" title="{$vo.consume_point}"></div>
@@ -38,8 +38,9 @@
             </ul>
             <input id="brand-id" type="hidden" name="brand" value="brand0"/>
             <input id="brand-value" type="hidden" value="0"/>
-            <input id="pay-method" type="hidden" name="method" value="price"/>
-            <input id="num-value" type="hidden" name="num" value="2"/>
+
+            <input class="confirm-info-source" id="num-value" type="hidden" name="num" value="2"/>
+            <input class="confirm-info-source" id="pay-method" type="hidden" name="method" value="price"/>
 
             <div class="number-box">
                 <div class="number-title">

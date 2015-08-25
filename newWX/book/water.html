@@ -29,7 +29,7 @@
                 {foreach $goods_info as $vo}
                     <li>
                         <img class="brand-List-box" src="{$static_url}/imgs/choose-school-back.png"/>
-                        <img class="brand-logo" src="{$static_url}{$vo.pic}"/>
+                        <img class="brand-logo" src="{$static_url}{$vo.pic}" title="品牌名称"/>
                         <a class="brand-a" href="#">
                             <div class="brand-price" title="{$vo.price}"></div>
                             <div class="brand-integration" title="{$vo.consume_point}"></div>
@@ -41,8 +41,8 @@
             </ul>
             <input id="brand-id" type="hidden" name="brand" value="brand0"/>
             <input id="brand-value" type="hidden" value="0"/>
-            <input id="pay-method" type="hidden" name="method" value="price"/>
             <input id="num-value" type="hidden" name="num" value="2"/>
+            <input id="pay-method" type="hidden" name="method" value="price"/>
 
             <div class="number-box">
                 <div class="number-title">
@@ -78,7 +78,27 @@
                 </div>
             </div>
         </form>
+    </div>
 
+    <div class="confirmBox" id="confirm-whole-box">
+        <div class="confirm-mainbody">
+            <img class="dlIcon"/>
+            <p class="confirm-title">订单信息确认</p>
+            <div class="confirm-content">
+                <ul>
+                    <li>宿舍号：<span class="confirm-info"></span></li>
+                    <li>品牌：<span class="confirm-info"></span></li>
+                    <li>数量：<span class="confirm-info"></span></li>
+                    <li>支付方式：<span class="confirm-info"></span></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="confirm-btn-box">
+                <a href="javascript:void(0)" onclick="confirmCancel()">再改改</a>
+                <a class="confirm-sure" href="javascript:void(0)" onclick="upForm()">确认</a>
+                <div class="clear"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
