@@ -29,3 +29,17 @@
 .btn-box{
     width:100%!important;
 }
+
+.dormitory-box{
+    width:100%;
+    height: 45px;
+    position: relative;
+}
+.input-building{
+    width:40%!important;
+    float: left;
+}
+.input-dormitory{
+    width:50%!important;
+    float: right;
+}

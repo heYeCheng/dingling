@@ -140,7 +140,13 @@ img{
     color:#333;
     -webkit-appearance:none;
 }
-
+.dingling-banner{
+    width:80%;
+    margin:0 auto 20px auto;
+}
+.dingling-banner img{
+    width:100%;
+}
 
 
 

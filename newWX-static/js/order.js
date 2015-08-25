@@ -51,4 +51,20 @@ document.ready(function(){
         selected.addEventListener("touchstart", integrationCheck, false);
     }
 
+    //调整品牌位置
+    var liNum = document.getElementsByClassName("brand-List-item");
+    alert(liNum.length);
+    if(liNum.length == 1){
+        for(var i=0;i<liNum.length;i++){
+            liNum[i].style.left = 36 +"%";
+        }
+    }else if(liNum.length == 2){
+        for(var i=0;i<liNum.length;i++){
+            liNum[i].style.left = 20 +"%";
+        }
+    }else if(liNum.length == 3){
+        for(var i=0;i<liNum.length;i++){
+            liNum[i].style.left = 3.8 +"%";
+        }
+    }
 });
