@@ -133,15 +133,13 @@ function dlConfirm(){
         conFirmBox[0].innerHTML = conFirmIS[0].innerHTML;
         conFirmBox[1].innerHTML = conFirmIS[1].title;
         conFirmBox[2].innerHTML = conFirmIS[2].value;
+        alert(conFirmIS[3].value)
         if (conFirmIS[3].value == "price") {
             conFirmBox[3].innerHTML = "水到付现金";
         }else if(conFirmIS[3].value == "integration"){
             conFirmBox[3].innerHTML = "积分免费换";
-        }else if(conFirmIS[3].value == "get"){
-            conFirmBox[2].innerHTML = '提水';
-            conFirmBox[3].innerHTML = conFirmIS[2].value;
         }else{
-            conFirmBox[3].innerHTML = "现金预付";
+            conFirmBox[3].innerHTML = "水到付现金";
         }
         if(conFirmIS.length >4){
             conFirmBox[4].innerHTML = conFirmIS[4].value;

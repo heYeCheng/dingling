@@ -1,0 +1,69 @@
+/*选择学校*/
+.school-List{
+    margin:20px 0 0 20px;
+}
+
+.school-List li{
+    width:33%;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+.school-List-box{
+    width:100%;
+}
+.school-logo{
+    width:80%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.freeback-form{
+    width:80%;
+    height: auto;
+    display: block;
+    margin:0 auto;
+    position: relative;
+    bottom:10px;
+}
+.freeback-top{
+    width:100%;
+}
+.freeback-middle{
+    background: url("../imgs/freeback-middle.jpg") repeat-y;
+    background-size:100%;
+    width:100%;
+    height:80px;
+    position: relative;
+}
+.freeback-middle textarea{
+    width:90%;
+    height:100%;
+    display: block;
+    margin:0 auto;
+    border:none;
+    resize:none;
+    font-size:16px;
+    color:#333;
+}
+.freeback-bottom{
+    width:100%;
+}
+.freeback-btn{
+    width:100%;
+    margin:0 auto;
+    position: relative;
+    top:20px;
+}
+.freeback-btn img{
+    width:100%;
+}
+.freeback-btn input{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    display:none;
+}

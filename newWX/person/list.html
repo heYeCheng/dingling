@@ -43,6 +43,18 @@
                             {elseif $vo.pay_type == 3}
                                 <td>积分消费 -{$vo.consume_points}</td>
                             {/if}
+
+                            {if $vo.status == 0}
+                                {if $vo.created > '2015-08-23'}
+                                    <td class="order-cancel-btn" title="btn" id="{$vo.oid}">取消</br>订单</td>
+                                {else}
+                                    <td class="order-cancel-btn order-dealing" title="btn">正在</br>配送</td>
+                                {/if}
+                            {elseif $vo.status == 1}
+                                <td class="order-cancel-btn order-dealing" title="btn">正在</br>配送</td>
+                            {elseif $vo.status == 2}
+                                <td class="order-cancel-btn order-done" title="btn">配送</br>完成</td>
+                            {/if}
                         </tr>
                     {/foreach}
                 </tbody>
@@ -51,7 +63,7 @@
             <div id="pullUp">
                 <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
             </div>
-
+            <input type="hidden" id="wx_link" value="{$url_code}">
         </div>
         </div>
     </div>

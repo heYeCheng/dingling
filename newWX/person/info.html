@@ -15,7 +15,7 @@
             <p class="p-name">{$info.name}</p>
             <div class="integration-box">
                 <img src="{$static_url}/imgs/integration-box.png"/>
-                <p class="integration-value">{$info.point}</p>
+                <p class="integration-value" id="integration">{$info.point}</p>
             </div>
             <div class="empty-box-back">
                 <img src="{$static_url}/imgs/empty-box-back.png"/>
@@ -57,6 +57,9 @@
             </div>
         </div>
     </div>
+    <div style="display:none;">
+        <script src="http://s95.cnzz.com/z_stat.php?id=1256181060&web_id=1256181060" language="JavaScript"></script>
+    </div>
 </body>
 
 <script src="{$static_url}/js/ajax.js"></script>
@@ -68,11 +71,10 @@
             alert(data);
             str = '<img src="{$static_url}/imgs/personal-center-checkin-btn-already.png"/>'
             document.getElementById('signBtn').innerHTML = str
+            document.getElementById('integration').innerHTML = parseInt(document.getElementById('integration').innerHTML)+5
         });
     }
         
 </script>
-<div style="display:none;">
-    <script src="http://s95.cnzz.com/z_stat.php?id=1256181060&web_id=1256181060" language="JavaScript"></script>
-</div>
+
 </html>

@@ -36,7 +36,7 @@
     <div class="content" style="display:none" id="second">
         <form class="information-form">
             <a class="selectInput-box">
-                <span class="current-select">请选择校区</span>
+                <span class="current-select" id="xiaoqu">请选择校区</span>
                 <select class="selectInput" title="district" onchange="change_reg(this)" id="selectInput">
                     <option value="">请选择校区</option>
                     <option>南校区</option>
@@ -71,7 +71,13 @@
 
         str = '<option value="">请选择校区</option>'
         for (var i = 0; i < c_arr.length; i++) {
-            str += '<option value="'+ c_arr[i] +'">'+ cn_arr[i] + '</option>';
+            if (i == 0) {
+                $('#xiaoqu').html(cn_arr[i])
+                $('#xiaoqu').addClass('selected-color')
+                str += '<option selected value="'+ c_arr[i] +'">'+ cn_arr[i] + '</option>';
+            }else{
+                str += '<option value="'+ c_arr[i] +'">'+ cn_arr[i] + '</option>';
+            }
         };
         $('#selectInput').html(str)
 		$('#first').hide('300')
@@ -87,9 +93,9 @@
 
         if (cid.length < 1) {
             alert('请选择校区')
-        }else if(build=="@"&&isNaN(build)) {
+        }else if(build==""&&isNaN(build)) {
             alert('请填写宿舍栋号,仅支持数字')
-        }else if(dormitory=="@"&&isNaN(dormitory)) {
+        }else if(dormitory==""&&isNaN(dormitory)) {
             alert('请填写宿舍号，仅支持数字')
         }else{
             roomNum = build + "-" +dormitory;

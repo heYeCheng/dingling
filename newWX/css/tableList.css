@@ -18,13 +18,37 @@ html,body{
 
 .table-body{
     width:100%;
+    overflow-x:hidden;
+}
+.table-body-back{
+    display: block;
+    position:relative;
+    left:0px;
 }
 .table-body-back td{
     text-align: center;
     color:#333;
     padding: 7px 7px 7px 7px;
     font-size:14px;
+    font-family: "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", "STHeiti", "Helvetica Neue", "微软雅黑", SimHei, sans-serif;
     border-bottom:solid 1px #eee;
+}
+.order-cancel-btn{
+    width:70px;
+    height: auto;
+    background:#ff3535;
+    padding:7px 0!important;
+    color:#fff!important;
+    position: absolute;
+    top:0;
+    right: -70px;
+    display: block;
+}
+.order-dealing{
+    background:#ff9c00!important;
+}
+.order-done{
+    background:#ccc!important;
 }
 
 
@@ -99,4 +123,3 @@ html,body{
     from { -webkit-transform:rotate(0deg) translateZ(0); }
     to { -webkit-transform:rotate(360deg) translateZ(0); }
 }
-

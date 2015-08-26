@@ -19,7 +19,7 @@
     <div class="content">
         <div class="dormitory-box">
             <img src="{$static_url}/imgs/order-dormitory.png"/>
-            <p>{$info.addr}</p>
+            <p class="confirm-info-source">{$info.addr}</p>
             <div class="clear"></div>
         </div>
         <div class="left-water">
@@ -27,10 +27,10 @@
             <p id="left_num">{$pre_info.left_num}</p>
         </div>
         <form class="order-form">
-            <input id="brand-id" type="hidden" name="brand" value="{$pre_info.g_id}"/>
+            <input class="confirm-info-source" id="brand-id" type="hidden" name="brand" value="{$pre_info.g_id}" title="{$pre_info.g_name}" />
             <input id="brand-value" type="hidden" value="0"/>
-            <input id="pay-method" type="hidden" name="method" value="price"/>
-            <input id="num-value" type="hidden" name="num" value="2"/>
+            <input class="confirm-info-source" id="num-value" type="hidden" name="num" value="2"/>
+            <input class="confirm-info-source" id="pay-method" type="hidden" name="method" value="get"/>
 
             <div class="number-box">
                 <div class="number-title">
@@ -53,12 +53,33 @@
             <div class="subBtn-box">
                 <div class="btn-box">
                     <input type="hidden" value="{$url_code}" id="wx_link">
-                    <img src="{$static_url}/imgs/submit-btn.png" onclick="upForm(3);"/>
+                    <img src="{$static_url}/imgs/submit-btn.png" onclick="dlConfirm()"/>
                     <!--<input id="information-btn" class="btnInput" type="submit"/>-->
                 </div>
             </div>
         </form>
 
+    </div>
+
+    <div class="confirmBox" id="confirm-whole-box">
+        <div class="confirm-mainbody">
+            <img class="dlIcon"/>
+            <p class="confirm-title">订单信息确认</p>
+            <div class="confirm-content">
+                <ul>
+                    <li>宿舍号：<span class="confirm-info"></span></li>
+                    <li>品牌：<span class="confirm-info"></span></li>
+                    <li>支付方式：<span class="confirm-info"></span></li>
+                    <li>本次提取：<span class="confirm-info"></span></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="confirm-btn-box">
+                <a href="javascript:void(0)" onclick="confirmCancel()">再改改</a>
+                <a class="confirm-sure" href="javascript:void(0)" onclick="upForm(3)">确认</a>
+                <div class="clear"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

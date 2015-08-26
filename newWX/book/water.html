@@ -21,28 +21,28 @@
     <div class="content">
         <div class="dormitory-box">
             <img src="{$static_url}/imgs/order-dormitory.png"/>
-            <p>{$info.addr}</p>
+            <p class="confirm-info-source">{$info.addr}</p>
             <div class="clear"></div>
         </div>
         <form class="order-form">
             <ul class="brand-List">
                 {foreach $goods_info as $vo}
-                    <li>
+                    <li class="brand-List-item">
                         <img class="brand-List-box" src="{$static_url}/imgs/choose-school-back.png"/>
-                        <img class="brand-logo" src="{$static_url}{$vo.pic}" title="品牌名称"/>
+                        <img class="brand-logo" src="{$static_url}{$vo.pic}"/>
                         <a class="brand-a" href="#">
                             <div class="brand-price" title="{$vo.price}"></div>
                             <div class="brand-integration" title="{$vo.consume_point}"></div>
-                            <img id="brand{$vo.g_id}" class="light" src="{$static_url}/imgs/brand-light.png"/>
+                            <img id="brand{$vo.g_id}" class="light" src="{$static_url}/imgs/brand-light.png" title="{$vo.g_name}"/>
                         </a>
                     </li>
                 {/foreach}
                 <div class="clear"></div>
             </ul>
-            <input id="brand-id" type="hidden" name="brand" value="brand0"/>
+            <input class="confirm-info-source" id="brand-id" type="hidden" name="brand" value="brand0" title="" />
             <input id="brand-value" type="hidden" value="0"/>
-            <input id="num-value" type="hidden" name="num" value="2"/>
-            <input id="pay-method" type="hidden" name="method" value="price"/>
+            <input class="confirm-info-source" id="num-value" type="hidden" name="num" value="2"/>
+            <input class="confirm-info-source" id="pay-method" type="hidden" name="method" value="price"/>
 
             <div class="number-box">
                 <div class="number-title">
@@ -73,11 +73,12 @@
 
                 <div class="btn-box">
                     <input type="hidden" value="{$url_code}" id="wx_link">
-                    <img src="{$static_url}/imgs/submit-btn.png" onclick="upForm(1);"/>
+                    <img src="{$static_url}/imgs/submit-btn.png" onclick="dlConfirm()"/>
                     <!--<input id="information-btn" class="btnInput" type="submit"/>-->
                 </div>
             </div>
         </form>
+
     </div>
 
     <div class="confirmBox" id="confirm-whole-box">
@@ -95,7 +96,7 @@
             </div>
             <div class="confirm-btn-box">
                 <a href="javascript:void(0)" onclick="confirmCancel()">再改改</a>
-                <a class="confirm-sure" href="javascript:void(0)" onclick="upForm()">确认</a>
+                <a class="confirm-sure" href="javascript:void(0)" onclick="upForm(1)">确认</a>
                 <div class="clear"></div>
             </div>
         </div>

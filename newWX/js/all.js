@@ -32,6 +32,7 @@ function selectBrand(){
     dom.src = "/static/imgs/brand-selected.png";
     dom.name = "selected";
     brandId.value = dom.id;
+    brandId.title = dom.title;
 
     findSelected();
 }
